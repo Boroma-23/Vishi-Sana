@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vishi ♡ Sana</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#100d0e;color:#f4e9e8;font-family:Arial,sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:9;background:#100d0ee8;padding:18px;text-align:center}
+nav a{color:#cdbfc1;text-decoration:none;margin:0 15px;font-size:13px}.wrap{max-width:950px;margin:auto;padding:0 22px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding-top:70px}
+.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:11px;color:#c88a9d}
+h1{font-family:cursive;font-size:clamp(60px,12vw,120px);line-height:.85;margin:25px 0;color:#f1d8df}
+h1 span{color:#d99bb0}.hero p,.sub{color:#a99b9e;line-height:1.8}.scroll{margin-top:45px;color:#7f7376;font-size:11px;letter-spacing:2px}
+section{padding:100px 0}.title{font-family:cursive;font-size:45px;margin-bottom:10px}.card{background:#181415;border:1px solid #ffffff12;border-radius:22px;padding:28px;box-shadow:0 18px 60px #0005}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.hand{font-family:cursive;color:#efbdcb;font-size:30px}.card p{color:#aaa0a2;line-height:1.8}
+.gallery img{width:100%;border-radius:15px;display:block}.caption{font-size:12px;color:#95878a;margin-top:12px}
+.song{display:flex;align-items:center;gap:16px;margin:12px 0;cursor:pointer;transition:.2s}.song:hover{transform:translateY(-2px);border-color:#e5a2b833}.disc{width:45px;height:45px;border-radius:50%;background:radial-gradient(circle,#f5b3c5 0 12%,#542e3c 13% 28%,#161112 29%);flex:none}.song b{display:block}.song small{display:block;color:#8f8184;margin-top:5px}.play{margin-left:auto;color:#e2a3b8;font-size:12px}
+audio{width:100%;margin-top:15px}.future{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.future h3{font-family:cursive;font-size:27px;margin:0 0 8px}.future p{font-size:13px}
+.final{text-align:center;padding:130px 20px}.final h2{font-family:cursive;font-size:clamp(48px,8vw,80px);margin:15px 0}.final button{background:transparent;border:1px solid #c88a9d66;color:#dba5b6;border-radius:30px;padding:12px 20px;cursor:pointer}.secret{display:none;font-family:cursive;font-size:25px;color:#e7c2cc;margin:25px auto;max-width:550px}
+@media(max-width:700px){.grid,.future{grid-template-columns:1fr}nav a{margin:0 6px;font-size:10px}}
+</style>
+</head>
+<body>
+<nav><a href="#home">♡ Vishi & Sana</a><a href="#story">Our Story</a><a href="#moments">Little Things</a><a href="#music">Our Vibe</a><a href="#someday">Someday?</a></nav>
+
+<header class="hero" id="home"><div>
+<div class="eyebrow">for you</div>
+<h1>Vishi <span>♡</span> Sana</h1>
+<p>Some stories start as a joke.<br>Somewhere along the way, they become a little harder to call a joke.</p>
+<div class="scroll">↓ keep scrolling</div>
+</div></header>
+
+<main class="wrap">
+<section id="story"><div class="title">Our little story</div><div class="sub">Nothing dramatic. Just tiny things that somehow started meaning more.</div>
+<div class="grid"><div class="card"><div class="hand">It was supposed to be “mazze mazze”.</div><p>Teasing. Random talks. Acting like a couple for fun.</p><p>And then I started liking the part where it was <i>us</i>.</p></div>
+<div class="card"><div class="hand">A thought...</div><p>Maybe some things don't have to start seriously to become something serious.</p></div></div></section>
+
+<section id="moments"><div class="title">Little things</div><div class="sub">Some messages are better remembered than explained.</div>
+<div class="grid gallery"><div class="card"><img src="moment-1.png"><div class="caption">“I love you too yar.” Maybe the joke got a little too comfortable.</div></div>
+<div class="card"><img src="moment-2.png"><div class="caption">And somehow “I love you” became normal. 👀</div></div></div></section>
+
+<section id="music"><div class="title">Our vibe</div><div class="sub">Two songs. No explanation needed. Maybe listen in order.</div>
+<div class="card song" onclick="play('raabta.mp3','Raabta')"><div class="disc"></div><div><b>Raabta</b><small>my favorite ♡</small></div><div class="play">▶ play</div></div>
+<div class="card song" onclick="play('kaun-tujhe.mp3','Kaun Tujhe')"><div class="disc"></div><div><b>Kaun Tujhe</b><small>this one might say a little too much 👀</small></div><div class="play">▶ play</div></div>
+<div class="card" id="player" style="display:none;margin-top:15px"><div class="hand" id="now">Now playing ♡</div><audio id="audio" controls></audio></div>
+</section>
+
+<section id="someday"><div class="title">Someday?</div><div class="sub">Not a plan. Just thoughts that seem strangely nice.</div>
+<div class="future"><div class="card"><h3>Late night drives</h3><p>No destination. Bad music. Talking about everything.</p></div>
+<div class="card"><h3>Random dates</h3><p>“We're just going out” and somehow it becomes a whole day.</p></div>
+<div class="card"><h3>More us</h3><p>More memories. More stupid jokes. Maybe a little less pretend.</p></div></div></section>
+
+<section class="final"><div class="eyebrow">one last thing</div><h2>Maybe some stories<br>are written slowly.</h2><p class="sub">I'm not asking anything here.<br>I just wanted you to notice the hints.</p><button onclick="document.querySelector('.secret').style.display='block'">there's one more thing ↓</button>
+<div class="secret">If you ever wondered whether I'd want this little “joke” to become real... maybe you already know the answer. ♡</div></section>
+</main>
+<footer style="text-align:center;color:#65595c;padding:30px;font-size:11px">made from a joke that became a little too special ♡</footer>
+<script>
+function play(file,title){const a=document.getElementById('audio');a.src=file;document.getElementById('now').textContent='Now playing — '+title+' ♡';document.getElementById('player').style.display='block';a.play().catch(()=>{});document.getElementById('player').scrollIntoView({behavior:'smooth',block:'center'});}
+</script>
+</body></html>
